@@ -21,11 +21,35 @@
             </div>
         </div>
         <div class="right-sidebar">
-            <!-- TODO: Create a modern looking UI. -->
             <h1>Sign Up</h1>
+            <h3>Welcome, hooman! Join our litter box of legends. <br>It only takes a few paw-clicks!</h4>
             <form action="#" method="post">
-                
+                <div class="first-column">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="firstName" tabindex="1" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" tabindex="3" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" tabindex="5" required>
+                </div>
+
+                <div class="second-column">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="lastName" tabindex="2" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="number" name="phone" id="phone" pattern="^(09|\+639)\d{9}$" onKeyPress="if(this.value.length==15) return false;" tabindex="4" required>
+
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" name="confirm_password" id="confirmPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" tabindex="6" required>
+                </div>
+
+                <button type="submit" tabindex="7">Create Account</button>
             </form>
+
+            <p>Already have an account? <a href="#">Log In</a></p> 
         </div>
     </div>
 </body>
