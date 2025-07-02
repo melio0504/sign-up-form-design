@@ -4,16 +4,22 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* outline: 2px solid red; */
+}
+
+:root {
+    --bg-color: #f2f2f2;
+    --form-bg: #fff;
+    --font: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #f2f4f7;
+    background-color: var(--bg-color);
+    font-family: var(--font);
     overflow-x: hidden;
 }
 
 .container {
-    background-color: #fff;
+    background-color: var(--form-bg);
     height: 550px;
     width: 1000px;
     margin: 100px auto;
@@ -22,7 +28,7 @@ body {
     display: flex;
 }
 
-.left-sidebar {
+.img-sidebar {
     background-image: url(./assets/image.webp);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -30,19 +36,47 @@ body {
     height: 100%;
     border-radius: 15px 0 0 15px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.logo {
-    color: #fff;
-    align-self: flex-start;
+img {
+    width: 100px;
+    height: 100px;
+    transition: 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.5);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* AAAAAAAA so cute! */
+
+img:active {
+    animation: rotate 0.5s infinite linear;
 }
 
 .credit {
-    /* Make this text centered */
-
     color: #fff;
-    align-self: self-end;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+a {
+    color: #fff;
+    font-style: italic;
 }
 
 .right-sidebar {
