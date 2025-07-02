@@ -31,10 +31,11 @@ body {
 .img-sidebar {
     background-image: url(./assets/image.webp);
     background-repeat: no-repeat;
-    background-size: 100%;
-    width: 40%;
+    background-size: cover;
+    width: 35%;
     height: 100%;
     border-radius: 15px 0 0 15px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,13 +75,86 @@ img:active {
     padding-bottom: 25px;
 }
 
-a {
+.credit > a {
     color: #fff;
     font-style: italic;
 }
 
 .right-sidebar {
-    padding: 20px;
+    padding: 30px;
+}
+
+h1, h3 {
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.first-column {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-right: 80px;
+}
+
+.second-column {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+input {
+    width: 15em;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    border-style: solid;
+}
+
+input:focus {
+    background-color: rgb(242, 210, 189, 0.3);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #C19A6B;
+    padding: 15px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: #6F4E37;
+}
+
+button:active {
+    background-color: #5C4033;
+}
+
+.right-sidebar  a {
+    text-decoration: none;
+    color: #C19A6B;
+    font-weight: bold;
 }
 
 /* 
